@@ -238,6 +238,12 @@ app.get('/api/login', async (req, res) => {
 });
 
 const port = 5000;
+
+// Simple route for the root path
+app.get('/', (req, res) => {
+  res.send('Welcome to your server!');
+});
+
 app.listen(port, () => {
   console.log("server is started successfully");
 });
