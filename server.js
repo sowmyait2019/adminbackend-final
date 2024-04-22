@@ -197,11 +197,11 @@ app.get('/events/book-event', async (req, res) => {
 
 const orderSchema = new mongoose.Schema({
   name: String,
-  phoneNumber: String,
-  email: String,
+  phoneNumber:String,
+  email:String,
   address:String,
-  persons:String,
-
+  paymentType:String,
+  items: [{ name: String, quantity: Number, price: Number }]
 });
 const OrderModel = mongoose.model('Order', orderSchema,'orders');
 
